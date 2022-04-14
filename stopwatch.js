@@ -1,9 +1,11 @@
 /*global $*/
-var msec = 0;
-var sec = 0;
-var min = 0;
 
-var timer;
+
+let msec = 0;
+let sec = 0;
+let min = 0;
+
+let timer;
 
 $('#stop, #reset').prop('disabled', true);
 $('#start').prop('disabled', false);
@@ -17,7 +19,7 @@ $('#start').click(function() {
     $(this).prop('disabled', true);
     $('#stop, #reset').prop('disabled', false);
   
-})
+});
 
 
 $('#stop').click(function() {
@@ -27,7 +29,7 @@ $('#stop').click(function() {
     $(this).prop('disabled', true);
     $('#start, #reset').prop('disabled', false);
     
-})
+});
 
 
 $('#reset').click(function() {
@@ -41,7 +43,7 @@ $('#reset').click(function() {
     $('#stop, #reset').prop('disabled', true);
     $('#start').prop('disabled', false);
     
-})
+});
 
 
 function countUp() {
@@ -57,9 +59,9 @@ function countUp() {
         min += 1;
     }
     
-    msecNumber = ('0' + msec).slice(-2)
-    secNumber = ('0' + sec).slice(-2);
-    minNumber = ('0' + min).slice(-2);
+    const msecNumber = ('0' + msec).slice(-2);
+    const secNumber = ('0' + sec).slice(-2);
+    const minNumber = ('0' + min).slice(-2);
 
     $('#face').html(minNumber + ':' + secNumber + ':' + msecNumber);
   
